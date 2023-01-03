@@ -69,10 +69,10 @@ function arp_404_redirect(){
 			$ip_address	= sanitize_text_field($_SERVER['REMOTE_ADDR']);
 			$curr_url = home_url( $wp->request );
 			
-			$rowcount = $wpdb->get_var("SELECT COUNT(*) FROM $table_name WHERE url = '$curr_url' and ip_address = '$ip_address' ");
+			$rowcount = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM {$wpdb->prefix}arp_links_lists WHERE url = %s and ip_address = %s ", $curr_url, $ip_address));
 			
 			if($rowcount == 0){
-				if($wpdb->get_var( "show tables like '$table_name'" ) != $table_name) {
+				if($wpdb->get_var( "show tables like {$table_name}" ) != $table_name) {
 	
 					$charset_collate = $wpdb->get_charset_collate();
 					$sql = "CREATE TABLE IF NOT EXISTS $table_name (

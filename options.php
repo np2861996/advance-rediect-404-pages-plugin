@@ -96,17 +96,18 @@ $tab = isset($_GET['tab']) ? sanitize_text_field($_GET['tab']) : $default_tab;
 
                                 <?php
                                 global $wpdb;
-                                $table_name = $wpdb->prefix . "arp_links_lists";
+                                $table_name = $wpdb->prefix . 'arp_links_lists';
 
                                 $pagenum = isset($_GET['pagenum']) ? absint($_GET['pagenum']) : 1;
 
                                 $limit = 20; 
                                 $offset = ($pagenum - 1) * $limit;
-                                $total = $wpdb->get_var("select count(*) as total from $table_name ORDER BY 'time' DESC");
+                                $total = $wpdb->get_var("select count(*) as total from {$table_name} ORDER BY 'time' DESC");
                                 $num_of_pages = ceil($total / $limit);
 
-                                $rows = $wpdb->get_results("SELECT * from $table_name ORDER BY `time` DESC limit $offset, $limit");
-                                // $rows = $wpdb->get_results("SELECT * from $table_name ORDER BY 'time' DESC  limit $offset, $limit");
+                               $rows = $wpdb->get_results($wpdb->prepare("SELECT * from {$wpdb->prefix}arp_links_lists ORDER BY `time` DESC limit %d, %d", $offset,$limit  ));
+                                 //$rows = $wpdb->get_results("SELECT * from $table_name ORDER BY 'time' DESC  limit $offset, $limit");
+                                
                                 $rowcount = $wpdb->num_rows;
 
                                 ?>
