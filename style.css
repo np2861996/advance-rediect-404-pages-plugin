@@ -1,0 +1,148 @@
+.arp_inner {
+    background-color: #fff;
+    display: inline-block;
+    width: 95%;
+}
+
+.notice-success.arp-success-msg {
+    border-left-color: #46b450;
+}
+
+.notice-error.arp-error-msg {
+    border-left-color: red! important;
+}
+
+.arp-section {
+    display: inline-block;
+    width: 100%;
+    padding-top: 1px;
+}
+
+.arp-option-section .nav-tab {
+    margin-left: 0;
+    margin-right: 15px;
+    background: #fff;
+    padding: 15px 25px;
+    font-size: 16px;
+    color: #000;
+    border: none;
+}
+.arp-option-section a.nav-tab.nav-tab-active {
+    border-bottom: 4px solid #3568b7;
+}
+
+.arp-option-section a.nav-tab.nav-tab-active,
+.arp-option-section a.nav-tab:hover {
+    background: #fff;
+    color: #000;
+    border-color: #125e9a;
+    box-shadow: none;
+}
+
+.arp-section .button-primary.arp-submit {
+    background: #125e9a;
+    color: #ffffff;
+    padding: 3px 16px;
+    font-size: 14px;
+    border: none;
+    box-shadow: none;
+    transition: 0.3s;
+}
+
+.arp-section .arp-error-lists {
+    width: 99%;
+}
+
+.arp-page-numbers {
+    display: block;
+    margin-top: 20px;
+}
+
+.arp-page-numbers li a,
+.page-numbers.current {
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    box-shadow: 0 10px 40px rgba(37, 58, 105, 0.09);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: #125e9a;
+    font-size: 16px;
+    z-index: 10;
+    transition: 0.3s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none !important;
+}
+
+.arp-page-numbers li {
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.arp-page-numbers li:last-child {
+    margin-right: 0;
+}
+
+.arp-page-numbers li:first-child {
+    margin-left: 0;
+}
+
+.arp-page-numbers li a:hover,
+.page-numbers.current {
+    background: #125e9a;
+    color: #ffffff;
+}
+
+.arp_inner .form-table input,
+.arp_inner .form-table select {
+    height: 38px;
+    width: 360px;
+    margin: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.arp_inner .form-table select {
+    width: 140px;
+}
+
+.arp-section .button-primary.arp-submit:hover {
+    background: #222;
+}
+
+.arp-header .arp-h1 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.arp-error-lists .wp-list-table .manage-column {
+    padding: 12px 10px;
+}
+
+.arp_inner .form-table th {
+    font-size: 15px;
+    padding-top: 26px;
+}
+.arp_inner form {
+    background-color: #f1f1f1;
+}
+ul.arp-tab-list {
+    align-items: center;
+    background: #fff;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 1px 0;
+    justify-content: space-between;
+    min-height: 60px;
+    padding: 0 var(--wpcode-space-h);
+}
+ul.arp-tab-list a.nav-tab.nav-tab-active {
+    background-color: #fff;
+    color: #000;
+}
+ul.arp-tab-list li {
+    margin-bottom: 0;
+}
