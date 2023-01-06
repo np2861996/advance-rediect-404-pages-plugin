@@ -151,12 +151,14 @@ $tab = isset($_GET['tab']) ? sanitize_text_field($_GET['tab']) : $default_tab;
 
                             <?php
                             if ( $page_links ) {
-                                echo '<ul class="arp-page-numbers">';     
-                                    echo '<li>';
-                                        echo join( '</li><li>', $page_links );
-                                    echo '</li>';                               
-                                echo '</ul>';
+                                $data = '<ul class="arp-page-numbers">     
+                                            <li>
+                                                '.join( '</li><li>', $page_links ).'
+                                            </li>                               
+                                        </ul>';
                             }
+
+                            echo wp_kses_post($data);
 
                             ?>
                         </div>
